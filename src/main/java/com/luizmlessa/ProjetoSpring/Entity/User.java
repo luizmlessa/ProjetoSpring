@@ -3,6 +3,9 @@ package com.luizmlessa.ProjetoSpring.Entity;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * The User class is a POJO that implements the Serializable interface
+ */
 public class User implements Serializable {
     private static final long serialVersion= 1l;
 
@@ -20,6 +23,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    // A getter method.
     public long getId() {
         return id;
     }
@@ -40,6 +44,7 @@ public class User implements Serializable {
         return password;
     }
 
+    // A setter method.
     public void setId(long id) {
         this.id = id;
     }
@@ -60,6 +65,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
+    // Overriding the equals and hashCode methods.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
