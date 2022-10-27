@@ -1,14 +1,22 @@
 package com.luizmlessa.ProjetoSpring.Entity;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
  * The User class is a POJO that implements the Serializable interface
  */
+@Entity
 public class User implements Serializable {
     private static final long serialVersion= 1l;
-
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String email;
